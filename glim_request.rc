@@ -1,0 +1,28 @@
+#include "resource.h"
+#include <windows.h>
+#include <afxres.h>
+
+IDR_MAINFRAME ICON "res\\glim_request.ico"
+
+IDD_GLIM_REQUEST_DIALOG DIALOGEX 0, 0, 980, 640
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "glim_request"
+FONT 9, "Malgun Gothic"
+BEGIN
+LTEXT           "dot radius", IDC_STATIC_RADIUS_LABEL, 14, 14, 55, 12
+EDITTEXT        IDC_EDIT_POINT_RADIUS, 72, 12, 50, 14, ES_AUTOHSCROLL | WS_BORDER
+
+LTEXT           "circle thickness", IDC_STATIC_THICKNESS_LABEL, 140, 14, 65, 12
+EDITTEXT        IDC_EDIT_BORDER_THICKNESS, 210, 12, 50, 14, ES_AUTOHSCROLL | WS_BORDER
+
+PUSHBUTTON      "random movement", IDC_BTN_RANDOM_MOVE, 280, 10, 70, 18
+PUSHBUTTON      "refresh", IDC_BTN_RESET, 360, 10, 55, 18
+
+LTEXT           "Point 1: (-, -)", IDC_STATIC_P1, 440, 14, 110, 12
+LTEXT           "Point 2: (-, -)", IDC_STATIC_P2, 560, 14, 110, 12
+LTEXT           "Point 3: (-, -)", IDC_STATIC_P3, 680, 14, 110, 12
+LTEXT           "Center : (-, -)", IDC_STATIC_CENTER, 800, 14, 120, 12
+
+CONTROL         "", IDC_STATIC_CANVAS, "Static", WS_CHILD | WS_VISIBLE | WS_BORDER, 14, 40, 950, 585
+END
